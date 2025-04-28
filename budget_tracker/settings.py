@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'finance',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 # Add authentication classes
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'budget_tracker.urls'
@@ -141,10 +143,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-INSTALLED_APPS += ['corsheaders']
-
-MIDDLEWARE = ['corsheaders.middleware.CorsMiddleware'] + MIDDLEWARE
 
 CORS_ALLOW_ALL_ORIGINS = True  # (or specify your React frontend URL later)
 
