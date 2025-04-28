@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
 ]
-
+CSRF_TRUSTED_ORIGINS='https://budget-tracker-backend-production-2231.up.railway.app';
 # Add authentication classes
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
